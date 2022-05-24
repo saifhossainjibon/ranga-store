@@ -23,7 +23,81 @@
     />
   </head>
   <body>
-    <h1>Welcome to ranga store</h1>
+    <main class="main">
+      <!-- input field & button  -->
+      <div class="search-field">
+        <div class="search-box">
+          <input id="input-field" class="search-field" type="text" />
+          <button
+            type="button"
+            class="btn btn-primary search-button"
+            data-toggle="button"
+            aria-pressed="false"
+            autocomplete="off"
+            id="search-btn"
+            onclick="loadProducts()"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+      <!-- all product here  -->
+      <div class="row">
+        <div class="col-md-9 col-lg-9 col-sm-7">
+          <div id="all-products" class=""></div>
+        </div>
+        <!-- my cart  -->
+        <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
+          <div class="cart" id="my-cart">
+            <table class="table">
+              <thead>
+                <h1>My-Cart</h1>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Total Added-Products:</th>
+                  <td><span id="total-Products">0</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>Price:</th>
+                  <td>$ <span id="price">0</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>Delivery-Charge:</th>
+                  <td>$ <span id="delivery-charge">20</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>Total-Tax:</th>
+                  <td>$ <span id="total-tax">0</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Total:</th>
+                  <td colspan="2">$ <span id="total">0</span></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="parces text-center">
+              <button class="btn btn-primary text-center">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <!-- add javascript  file  -->
     <script src="./js/app.js"></script>
   </body>
